@@ -9,35 +9,51 @@
 <body>
   <a-scene>
 
-    <!-- Sky  -->
-    <a-sky src = "planet_textures/nightsky.jpg"></a-sky>
+    <!-- Sky -->
+    <a-sky src="planet_textures/nightsky.jpg"></a-sky>
     
-    <!-- Sun -->
-    <a-sphere id="sun" position="0 1.25 -5" radius="3" src="planet_textures/sun.jpeg" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 22224"></a-sphere>
+    <!-- Sun (reduced to 1/3 size) -->
+    <a-sphere id="sun" position="0 1.25 -5" radius="1" src="planet_textures/sun.jpeg" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 22224"></a-sphere>
 
     <!-- Mercury -->
-    <a-sphere id="mercury" position="3.9 1.25 -5" radius="0.1" src="planet_textures/mercury.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 58650"></a-sphere>
+    <a-entity id="mercury-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 58650">
+      <a-sphere id="mercury" position="3.9 1.25 -5" radius="0.1" src="planet_textures/mercury.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 58650"></a-sphere>
+    </a-entity>
 
     <!-- Venus -->
-    <a-sphere id="venus" position="7.2 1.25 -5" radius="0.2" src="planet_textures/venus.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 243000"></a-sphere>
+    <a-entity id="venus-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 243000">
+      <a-sphere id="venus" position="7.2 1.25 -5" radius="0.2" src="planet_textures/venus.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 243000"></a-sphere>
+    </a-entity>
 
     <!-- Earth -->
-    <a-sphere id="earth" position="10 1.25 -5" radius="0.3" src="planet_textures/earth.jpeg" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 864"></a-sphere>
+    <a-entity id="earth-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 36500">
+      <a-sphere id="earth" position="10 1.25 -5" radius="0.3" src="planet_textures/earth.jpeg" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 864"></a-sphere>
+    </a-entity>
 
     <!-- Mars -->
-    <a-sphere id="mars" position="15.2 1.25 -5" radius="0.2" src="planet_textures/mars.jpeg" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 8864"></a-sphere>
+    <a-entity id="mars-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 68700">
+      <a-sphere id="mars" position="15.2 1.25 -5" radius="0.2" src="planet_textures/mars.jpeg" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 8864"></a-sphere>
+    </a-entity>
 
     <!-- Jupiter -->
-    <a-sphere id="jupiter" position="52 1.25 -5" radius="1.5" src="planet_textures/jupiter.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 3528"></a-sphere>
+    <a-entity id="jupiter-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 43300">
+      <a-sphere id="jupiter" position="52 1.25 -5" radius="1.5" src="planet_textures/jupiter.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 3528"></a-sphere>
+    </a-entity>
 
     <!-- Saturn -->
-    <a-sphere id="saturn" position="95 1.25 -5" radius="1.2" src="planet_textures/saturn.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 3952"></a-sphere>
+    <a-entity id="saturn-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 107000">
+      <a-sphere id="saturn" position="95 1.25 -5" radius="1.2" src="planet_textures/saturn.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 3952"></a-sphere>
+    </a-entity>
 
     <!-- Uranus -->
-    <a-sphere id="uranus" position="192 1.25 -5" radius="0.7" src="planet_textures/uranus.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 60480"></a-sphere>
+    <a-entity id="uranus-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 306600">
+      <a-sphere id="uranus" position="192 1.25 -5" radius="0.7" src="planet_textures/uranus.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 60480"></a-sphere>
+    </a-entity>
 
     <!-- Neptune -->
-    <a-sphere id="neptune" position="301 1.25 -5" radius="0.7" src="planet_textures/neptune.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 54720"></a-sphere>
+    <a-entity id="neptune-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 601500">
+      <a-sphere id="neptune" position="301 1.25 -5" radius="0.7" src="planet_textures/neptune.jpeg" rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 54720"></a-sphere>
+    </a-entity>
 
   </a-scene>
 </body>
